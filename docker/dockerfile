@@ -1,0 +1,49 @@
+# This file contains details about different intstructions and arguments required to configure dockerfile.
+
+FROM alpine:3.21
+# FROM Instruction specifies, which base image to be pulled from a container registry to reference to build the dockerfile.
+# docker run imagename cat /etc/os-release , this command checks which os type & version does the image is using.
+
+#RUN ["/bin/sh", "-c", "apk add --no-cache curl python3 py3-pip"]
+
+RUN apk add --no-cache curl python3 py3-pip py3-flask
+# RUN Instruction executes commands during the image build process.
+# RUN Instruction uses two types of Forms:-
+   # 1. Shell form:
+    #ex: RUN echo hello  
+   # 2. Exec form:
+    #ex: RUN ["/bin/sh", ",c", "echo hello"]
+# To check differnt layers of a dockerfile, we can use command- docker history imagename.
+
+WORKDIR /downloads
+# Using this instruction we can set the path to work.
+# Also we can set path to any subsequent ADD, COPY, CMD , ENTRYPOINT or RUN instructions inside the dockerfile.
+# also if the path mentioned is not available it will create the path.
+# to check the pwd, docker run imagename pwd
+
+RUN adduser -D ShivaReddy
+
+USER ShivaReddy
+# Set the user name or UID to use when running the image in addition to any subsequent CMD, ENTRYPOINT, or RUN instructions that follow it in the Dockerfile.
+# By default if no user is created, it will take root as the user.
+# command to check user, docker run imagename whoami.
+# to create the user we need to use command, RUN username -D ShivaReddy
+
+ENV Name=Shiva \
+    Age=34 \
+    Weight=55
+# Set the environment variable key to the value value
+
+COPY app.py /downloads/
+# Copy files or folders from source to the dest path in the image's filesystem.
+# COPY hello.txt /absolute/path
+
+ADD https://txt2html.sourceforge.net/sample.txt /downloads/
+# Copy files, folders, or remote URLs from source to the dest path in the image's filesystem.
+
+EXPOSE 5002
+# Define the network ports that this container will listen on at runtime.
+# Command to check if the port is exposed, use docker inspect 
+
+# Define the default command to run the application
+CMD ["python3", "app.py"]

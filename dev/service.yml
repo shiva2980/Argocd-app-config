@@ -8,4 +8,4 @@ spec:
   ports:
   - port: 8080           # Port exposed by the service
     protocol: TCP
-    targetPort: 5004      # Port on which the container is listening
+    targetPort: 5003      # Port on which the container is listening

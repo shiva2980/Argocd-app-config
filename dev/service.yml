@@ -1,11 +1,18 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapp-service2
+  name: myapp-service
 spec:
   selector:
-    app: myapp-deployment
+    app: myapp  # Matches the label defined in the Deployment
   ports:
-  - port: 8080           # Port exposed by the service
-    protocol: TCP
-    targetPort: 5003      # Port on which the container is listening
+    - protocol: TCP
+      port: 8080      # The port exposed by the Service for recursing-golick
+      targetPort: 5002 # Target port on the recursing-golick container
+    - protocol: TCP
+      port: 8080      # The port exposed by the Service for festive-khayyam
+      targetPort: 5003 # Target port on the festive-khayyam container
+    - protocol: TCP
+      port: 8080      # The port exposed by the Service for distracted-maxwell
+      targetPort: 5004 # Target port on the distracted-maxwell container
+  type: ClusterIP      # Exposes the service within the Kubernetes cluster

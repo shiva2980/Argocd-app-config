@@ -13,7 +13,7 @@ spec:
         app: myapp-deployment
     spec:
       containers:
-      - name: distracted_maxwell
+      - name: distracted-maxwell
         image: veerapaku/argocd:imagethree-3.0
         ports:
         - containerPort: 5004

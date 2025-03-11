@@ -41,7 +41,7 @@ COPY app.py /downloads/
 ADD https://txt2html.sourceforge.net/sample.txt /downloads/
 # Copy files, folders, or remote URLs from source to the dest path in the image's filesystem.
 
-EXPOSE 5002
+EXPOSE 5004
 # Define the network ports that this container will listen on at runtime.
 # Command to check if the port is exposed, use docker inspect 
 

@@ -13,10 +13,10 @@ spec:
         app: myapp-deployment
     spec:
       containers:
-      - name: festive_khayyam
-        image: veerapaku/argocd:imagetwo-2.0
+      - name: distracted_maxwell
+        image: veerapaku/argocd:imagethree-3.0
         ports:
-        - containerPort: 5003
+        - containerPort: 5004
         resources:
           requests:
             memory: "256Mi"  # Minimum memory requested by the container

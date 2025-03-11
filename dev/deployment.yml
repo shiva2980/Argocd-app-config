@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: festive-khayyam
-        image: veerapaku/argocd:imagetw0-2.0
+        image: veerapaku/argocd:imagetwo-2.0
         ports:
         - containerPort: 5003
         resources:

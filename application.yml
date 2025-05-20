@@ -12,7 +12,7 @@ spec:
     path: manifests/bases/image-three
   destination: 
     server: https://kubernetes.default.svc
-    namespace: myapp
+    namespace: myapp-imagethree
 
   syncPolicy:
     syncOptions:

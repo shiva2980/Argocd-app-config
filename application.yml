@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/shiva2980/Argocd-app-config.git
     targetRevision: HEAD
-    path: manifests
+    path: manifests/bases/image-three
   destination: 
     server: https://kubernetes.default.svc
     namespace: myapp

@@ -7,6 +7,7 @@ images:
 
 resources:
 - ../../bases/image-three
+- ../../bases/common/ingress.yaml
 
 namespace: myapp-imagethree
 namePrefix: dev-

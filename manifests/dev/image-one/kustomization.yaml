@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
   - ../../bases/image-one
+  - ../../bases/common/ingress.yaml
 
 images:
   - name: veerapaku/argocd-app

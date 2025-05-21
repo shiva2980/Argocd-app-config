@@ -7,6 +7,7 @@ images:
 
 resources:
 - ../../bases/image-two
+- ../../bases/common/ingress.yaml
 
 namespace: myapp-imagetwo
 namePrefix: dev-

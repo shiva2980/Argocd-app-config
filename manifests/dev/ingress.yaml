@@ -14,7 +14,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: myapp-imagethree-service
+            name: dev-myapp-imagethree-service
             port:
               number: 5004
 

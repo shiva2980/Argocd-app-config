@@ -13,11 +13,11 @@ spec:
         app: myapp-imageone
     spec:
       containers:
-      - name: recursing-golick
-        image: veerapaku/argocd:imageone-1.0
+      - name: imagethreecontainer
+        image: veerapaku/argocd-app:3.0
         imagePullPolicy: Always
         ports:
-        - containerPort: 5002
+        - containerPort: 5006
         resources:
           requests:
             memory: "256Mi"

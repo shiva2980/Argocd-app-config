@@ -6,10 +6,10 @@ spec:
   selector:
     app: myapp-imageone  # Matches the label in your Deployment
   ports:
-    - name: recursing-golick-port    # Unique name for the first port
+    - name: imagethreecontainer    # Unique name for the first port
       protocol: TCP
-      port: 5002                     # Port exposed by the Service for recursing-golick
-      targetPort: 5002               # Target port on the recursing-golick container
+      port: 5006                     # Port exposed by the Service for recursing-golick
+      targetPort: 5006               # Target port on the recursing-golick container
     # - name: festive-khayyam-port     # Unique name for the second port
     #   protocol: TCP
     #   port: 5003                     # Port exposed by the Service for festive-khayyam

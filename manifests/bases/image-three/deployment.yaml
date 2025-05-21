@@ -13,28 +13,6 @@ spec:
         app: myapp-imagethree
     spec:
       containers:
-      # - name: recursing-golick
-      #   image: veerapaku/argocd:imageone-1.0
-      #   ports:
-      #   - containerPort: 5002
-      #   resources:
-      #     requests:
-      #       memory: "256Mi"
-      #       cpu: "500m"
-      #     limits:
-      #       memory: "512Mi"
-      #       cpu: "1"
-      # - name: festive-khayyam
-      #   image: veerapaku/argocd:imagetwo-2.0
-      #   ports:
-      #   - containerPort: 5003
-      #   resources:
-      #     requests:
-      #       memory: "256Mi"
-      #       cpu: "500m"
-      #     limits:
-      #       memory: "512Mi"
-      #       cpu: "1"
       - name: imageonecontainer
         image: veerapaku/argocd-app:1.0
         ports:
@@ -46,3 +24,19 @@ spec:
           limits:
             memory: "512Mi"  # Maximum memory the container can use
             cpu: "1"         # Maximum CPU the container can use
+        livenessProbe:       # Checks if the app is still alive — if it fails repeatedly, the container will be restarted.
+          httpGet:
+            path: /
+            port: 5004
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          timeoutSeconds: 2
+          failureThreshold: 3
+        readinessProbe:     # Checks if the app is ready to receive traffic — if it fails, the pod is removed from the Service endpoints.
+          httpGet:
+            path: /
+            port: 5004
+          initialDelaySeconds: 5
+          periodSeconds: 5
+          timeoutSeconds: 2
+          failureThreshold: 3

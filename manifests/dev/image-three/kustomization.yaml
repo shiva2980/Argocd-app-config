@@ -8,5 +8,5 @@ images:
 resources:
 - ../../bases/image-three
 
-namespace: myapp-imagthree
+namespace: myapp-imagethree
 namePrefix: dev-

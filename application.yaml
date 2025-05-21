@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/shiva2980/Argocd-app-config.git
     targetRevision: main
-    path: manifests/bases/image-three
+    path: manifests/dev/image-three
   destination: 
     server: https://kubernetes.default.svc
     namespace: myapp-imagethree
@@ -35,7 +35,7 @@ spec:
   source:
     repoURL: https://github.com/shiva2980/Argocd-app-config.git
     targetRevision: main
-    path: manifests/bases/image-two
+    path: manifests/dev/image-two
   destination: 
     server: https://kubernetes.default.svc
     namespace: myapp-imagetwo
@@ -61,7 +61,7 @@ spec:
   source:
     repoURL: https://github.com/shiva2980/Argocd-app-config.git
     targetRevision: main
-    path: manifests/bases/image-one
+    path: manifests/dev/image-one
   destination: 
     server: https://kubernetes.default.svc
     namespace: myapp-imageone

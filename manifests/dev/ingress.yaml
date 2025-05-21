@@ -18,6 +18,16 @@ spec:
             port:
               number: 5004
 
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myapp-ingress
+  namespace: myapp-imagetwo
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
   - host: image-two.local
     http:
       paths:
@@ -29,6 +39,16 @@ spec:
             port:
               number: 5005
 
+---
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myapp-ingress
+  namespace: myapp-imageone
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
   - host: image-one.local
     http:
       paths:

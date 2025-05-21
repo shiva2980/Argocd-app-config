@@ -24,10 +24,10 @@ spec:
       #     limits:
       #       memory: "512Mi"
       #       cpu: "1"
-      - name: festive-khayyam
-        image: veerapaku/argocd:imagetwo-2.0
+      - name: imagetwocontainer
+        image: veerapaku/argocd-app:2.0
         ports:
-        - containerPort: 5003
+        - containerPort: 5005
         resources:
           requests:
             memory: "256Mi"

@@ -22,7 +22,7 @@ spec:
             memory: "256Mi"  # Minimum memory requested by the container
             cpu: "500m"      # Minimum CPU requested by the container
           limits:
-            memory: "512Mi"  # Maximum memory the container can use
+            memory: "1"  # Maximum memory the container can use
             cpu: "1"         # Maximum CPU the container can use
         livenessProbe:       # Checks if the app is still alive — if it fails repeatedly, the container will be restarted.
           httpGet:

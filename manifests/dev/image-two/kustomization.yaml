@@ -2,7 +2,11 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
  
 images:
-- name: veerapaku/argocd:imagetwo-2.0
+- name: veerapaku/argocd-app
+  newTag: "2.0"
 
 resources:
 - ../../bases/image-two
+
+namespace: myapp-imagetwo
+namePrefix: dev-

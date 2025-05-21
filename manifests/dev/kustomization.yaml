@@ -3,3 +3,6 @@ kind: Kustomization
 
 resources:
 - ingress.yaml
+- image-one
+- image-two 
+- image-three

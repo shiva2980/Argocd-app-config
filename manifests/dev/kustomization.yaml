@@ -6,3 +6,4 @@ resources:
 - image-one
 - image-two 
 - image-three
+- myapp-tls-sealedsecret.yaml

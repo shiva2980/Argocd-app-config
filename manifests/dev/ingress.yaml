@@ -6,6 +6,10 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  tls:
+  - hosts:
+      - image-three.local
+    secretName: myapp-tls
   rules:
   - host: image-three.local
     http:

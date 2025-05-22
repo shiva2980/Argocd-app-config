@@ -2,8 +2,8 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
+- myapp-tls-sealedsecret.yaml
 - ingress.yaml
 - image-one
 - image-two 
 - image-three
-- myapp-tls-sealedsecret.yaml

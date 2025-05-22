@@ -28,6 +28,7 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  rules:
   - host: image-two.local
     http:
       paths:
@@ -49,6 +50,7 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
+  rules:
   - host: image-one.local
     http:
       paths:

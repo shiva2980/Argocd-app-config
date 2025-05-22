@@ -7,6 +7,7 @@ images:
 
 resources:
 - ../../bases/image-three
+- myapp-tls-sealedsecret.yaml
 
 namespace: myapp-imagethree
 namePrefix: dev-

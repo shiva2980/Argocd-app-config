@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: imageonecontainer
-        image: veerapaku/argocd-app:1.0
+        image: veerapaku/argocd-app:6.0
         ports:
         - containerPort: 5004
         env:

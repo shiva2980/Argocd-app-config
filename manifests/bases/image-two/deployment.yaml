@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: imagetwocontainer
-        image: veerapaku/argocd-app:2.0
+        image: veerapaku/argocd-app:5.0
         ports:
         - containerPort: 5005
         env:

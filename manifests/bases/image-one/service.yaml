@@ -10,12 +10,4 @@ spec:
       protocol: TCP
       port: 5006                     # Port exposed by the Service for recursing-golick
       targetPort: 5006               # Target port on the recursing-golick container
-    # - name: festive-khayyam-port     # Unique name for the second port
-    #   protocol: TCP
-    #   port: 5003                     # Port exposed by the Service for festive-khayyam
-    #   targetPort: 5003               # Target port on the festive-khayyam container
-    # - name: distracted-maxwell-port  # Unique name for the third port
-    #   protocol: TCP
-    #   port: 5004                     # Port exposed by the Service for distracted-maxwell
-    #   targetPort: 5004               # Target port on the distracted-maxwell container
   type: ClusterIP      # Exposes the service within the Kubernetes cluster

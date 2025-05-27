@@ -1,10 +1,12 @@
 from flask import Flask
+import os
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route("/")
 def hello():
-    return "Hello,! This is a simple Flask app running in Docker with imagethree:1.0"
+    msg = os.getenv("GREETING_MESSAGE", "Hello this is image1 with version 4.0")
+    return f"<h3>{msg}</h3>"
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5006)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5006)    

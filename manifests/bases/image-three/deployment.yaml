@@ -17,6 +17,13 @@ spec:
         image: veerapaku/argocd-app:1.0
         ports:
         - containerPort: 5004
+        env:
+          - name: GREETING_MESSAGE
+            valueFrom:
+              configMapKeyRef:
+                name: myapp-config
+                namespace: myapp-imagethree
+                key: GREETING_MESSAGE
         resources:
           requests:
             memory: "256Mi"  # Minimum memory requested by the container

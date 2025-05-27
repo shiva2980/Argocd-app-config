@@ -3,7 +3,7 @@ kind: Kustomization
  
 images:
 - name: veerapaku/argocd-app
-  newTag: "1.0"
+  newTag: "6.0"
 
 resources:
 - ../../bases/image-three

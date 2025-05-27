@@ -34,16 +34,16 @@ ENV Name=Shiva \
     Weight=55
 # Set the environment variable key to the value value
 
-COPY app5006.py /downloads/
+COPY app.py /downloads/
 # Copy files or folders from source to the dest path in the image's filesystem.
 # COPY hello.txt /absolute/path
 
 ADD https://txt2html.sourceforge.net/sample.txt /downloads/
 # Copy files, folders, or remote URLs from source to the dest path in the image's filesystem.
 
-EXPOSE 5006
+EXPOSE 5004
 # Define the network ports that this container will listen on at runtime.
 # Command to check if the port is exposed, use docker inspect 
 
 # Define the default command to run the application
-CMD ["python3", "app5006.py"]
+CMD ["python3", "app.py"]

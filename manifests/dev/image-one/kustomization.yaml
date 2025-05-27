@@ -6,7 +6,7 @@ resources:
 
 images:
   - name: veerapaku/argocd-app
-    newTag: "3.0"
+    newTag: "4.0"
 
 namespace: myapp-imageone
 

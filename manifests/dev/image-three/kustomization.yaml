@@ -1,12 +1,12 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
+# apiVersion: kustomize.config.k8s.io/v1beta1
+# kind: Kustomization
  
-images:
-- name: veerapaku/argocd-app
-  newTag: "6.0"
+# images:
+# - name: veerapaku/argocd-app
+#   newTag: "6.0"
 
-resources:
-- ../../bases/image-three
+# resources:
+# - ../../bases/image-three
 
-namespace: myapp-imagethree
-namePrefix: dev-
+# namespace: myapp-imagethree
+# namePrefix: dev-

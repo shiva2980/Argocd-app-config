@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
 - hpa.yaml
 - configmap.yaml
+- datadog-agent.yaml
 - ingress.yaml
 - image-one
 - image-two 

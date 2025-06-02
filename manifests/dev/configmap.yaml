@@ -25,15 +25,10 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: kubelet.check
+  name: kubelet-check
   namespace: datadog
-  labels:
-    app.kubernetes.io/name: datadog-agent
 data:
-  kubelet.d/conf.yaml: |
+  conf.yaml: |
     init_config:
     instances:
-      - url: https://127.0.0.1:10250
-        tls_verify: false
-        tags:
-          - custom:kubelet
+      - kubelet_tls_verify: false

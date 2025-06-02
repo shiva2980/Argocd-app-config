@@ -13,4 +13,7 @@ spec:
   override:
     agent:
       config:
-        configMapName: kubelet.check
+        configMapName: kubelet-check
+        configMapItems:
+          - key: conf.yaml
+            path: kubelet.d/conf.yaml

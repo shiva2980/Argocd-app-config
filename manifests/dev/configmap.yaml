@@ -25,10 +25,12 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: kubelet-check
+  name: datadog-kubelet-check
   namespace: datadog
+  labels:
+    ad.datadoghq.com/checks: "true"
 data:
-  conf.yaml: |
+  kubelet.d/conf.yaml: |
     init_config:
     instances:
       - kubelet_tls_verify: false

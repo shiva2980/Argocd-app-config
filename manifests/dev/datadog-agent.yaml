@@ -13,4 +13,4 @@ spec:
   override:
     agent:
       config:
-        configMapName: kubelet-check
+        configMapName: kubelet.check

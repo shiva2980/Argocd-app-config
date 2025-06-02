@@ -25,7 +25,7 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: kubelet-check
+  name: kubelet.check
   namespace: datadog
   labels:
     app.kubernetes.io/name: datadog-agent

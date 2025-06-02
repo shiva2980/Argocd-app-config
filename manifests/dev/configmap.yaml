@@ -21,3 +21,19 @@ metadata:
   namespace: myapp-imageone
 data:
   GREETING_MESSAGE: "Hello from ConfigMap!"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kubelet-check
+  namespace: datadog
+  labels:
+    app.kubernetes.io/name: datadog-agent
+data:
+  kubelet.d/conf.yaml: |
+    init_config:
+    instances:
+      - url: https://127.0.0.1:10250
+        tls_verify: false
+        tags:
+          - custom:kubelet

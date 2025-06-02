@@ -10,8 +10,7 @@ spec:
       apiSecret:
         secretName: datadog-secret
         keyName: api-key
-  features:
-    kubelet:
-      enabled: true
+  override:
+    agent:
       config:
-        tlsVerify: false
+        configMapName: kubelet-check

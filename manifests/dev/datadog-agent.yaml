@@ -6,6 +6,7 @@ metadata:
 spec:
   global:
     site: datadoghq.eu
+    clusterName: minikube     
     credentials:
       apiSecret:
         secretName: datadog-secret

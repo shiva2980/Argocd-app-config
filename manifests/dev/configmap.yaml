@@ -30,7 +30,7 @@ metadata:
   labels:
     ad.datadoghq.com/checks: "true"
 data:
-  kubelet.d/conf.yaml: |
+  kubelet.d_conf.yaml: |
     init_config:
     instances:
       - kubelet_tls_verify: false

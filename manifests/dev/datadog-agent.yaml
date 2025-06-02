@@ -10,10 +10,6 @@ spec:
       apiSecret:
         secretName: datadog-secret
         keyName: api-key
-  # features:
-  #   clusterChecks:
-  #     enabled: true
-  #     configProvider: configmap        
   overrides:
     agent:
       config:

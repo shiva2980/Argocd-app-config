@@ -11,10 +11,18 @@ spec:
       apiSecret:
         secretName: datadog-secret
         keyName: api-key
-  overrides:
-    agent:
+  # overrides:
+  #   agent:
+  #     config:
+  #       configMapName: datadog-kubelet-check
+  #       configMapItems:
+  #         - key: kubelet.d_conf.yaml
+  #           path: kubelet.d/conf.yaml
+  features:
+    customChecks:
+      enabled: true
       config:
         configMapName: datadog-kubelet-check
-        configMapItems:
+        items:
           - key: kubelet.d_conf.yaml
             path: kubelet.d/conf.yaml

@@ -34,7 +34,7 @@ spec:
   source:
     repoURL: https://github.com/shiva2980/Argocd-app-config.git
     targetRevision: main
-    path: manifests/dev
+    path: manifests/dev/dotnet-webapi
   destination:
     server: https://kubernetes.default.svc
     namespace: dotnet

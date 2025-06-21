@@ -27,7 +27,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: .net-application
+  name: net-application
   namespace: dotnet
 spec:
   project: Dotnet-Webapi

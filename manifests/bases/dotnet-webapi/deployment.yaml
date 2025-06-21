@@ -25,7 +25,7 @@ spec:
           limits:
             memory: "512Mi"
             cpu: "1"
-          livenessProbe:       # Checks if the app is still alive — if it fails repeatedly, the container will be restarted.
+        livenessProbe:       # Checks if the app is still alive — if it fails repeatedly, the container will be restarted.
           httpGet:
             path: /
             port: 8080

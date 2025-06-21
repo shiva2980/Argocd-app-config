@@ -42,7 +42,7 @@ spec:
         backend:
           service:
             # name: dev-pokemonreviewapp-service
-            name: pokemonreviewapp-service
+            name: dev-pokemonreviewapp-service
             port: 
               number: 80
 

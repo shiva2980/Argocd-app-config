@@ -9,4 +9,4 @@ images:
     newTag: "latest"
 
 namespace: dotnet
-# namePrefix: dev-dotnet
+namePrefix: dev-

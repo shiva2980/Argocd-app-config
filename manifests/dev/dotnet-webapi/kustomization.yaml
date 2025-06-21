@@ -8,6 +8,6 @@ images:
   - name: veerapaku/pokemonreviewapp
     newTag: "latest"
 
-namespace: Dotnet
+namespace: dotnet
 
 namePrefix: dev-

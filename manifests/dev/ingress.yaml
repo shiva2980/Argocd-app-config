@@ -41,7 +41,7 @@ spec:
         path: "/"
         backend:
           service:
-            name: dev-pokemonreviewapp-service
+            name: pokemonreviewapp-service
             port: 
               number: 80
 

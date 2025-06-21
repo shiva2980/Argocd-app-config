@@ -28,7 +28,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: net-application
-  namespace: dotnet
+  namespace: argocd
 spec:
   project: default
 
@@ -45,7 +45,7 @@ spec:
     automated:
       selfHeal: true
       prune: true
-      
+
 ---
 
 apiVersion: argoproj.io/v1alpha1

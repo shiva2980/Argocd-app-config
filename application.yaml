@@ -30,7 +30,7 @@ metadata:
   name: net-application
   namespace: dotnet
 spec:
-  project: Dotnet-Webapi
+  project: default
 
   source:
     repoURL: https://github.com/shiva2980/Argocd-app-config.git
@@ -53,7 +53,7 @@ metadata:
   name: myapp-argo-application-with-image2.0
   namespace: argocd
 spec:
-  project: Images
+  project: default
 
   source:
     repoURL: https://github.com/shiva2980/Argocd-app-config.git
@@ -79,7 +79,7 @@ metadata:
   name: myapp-argo-application-with-image1.0
   namespace: argocd
 spec:
-  project: Images
+  project: default
 
   source:
     repoURL: https://github.com/shiva2980/Argocd-app-config.git

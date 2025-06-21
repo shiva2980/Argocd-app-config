@@ -22,7 +22,6 @@ spec:
             valueFrom:
               configMapKeyRef:
                 name: myapp-config
-                namespace: myapp-imagtwo
                 key: GREETING_MESSAGE
         resources:
           requests:

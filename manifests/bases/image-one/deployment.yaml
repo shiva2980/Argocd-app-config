@@ -22,8 +22,7 @@ spec:
           - name: GREETING_MESSAGE
             valueFrom:
               configMapKeyRef:
-                name: myapp-config
-                namespace: myapp-imageone
+                name: myapp-config                
                 key: GREETING_MESSAGE
         resources:
           requests:

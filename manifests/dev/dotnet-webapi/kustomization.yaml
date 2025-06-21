@@ -10,4 +10,4 @@ images:
 
 namespace: dotnet
 
-namePrefix: dev-
+# namePrefix: dev-

@@ -8,4 +8,5 @@ resources:
 - ingress.yaml
 - image-one
 - image-two 
+- dotnet-webapi
 # - image-three

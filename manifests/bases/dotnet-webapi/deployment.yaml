@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Dotnet
+spec:
+  selector:
+    matchLabels:
+      app: Dotnet
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: Dotnet
+    spec:
+      containers:
+      - name: pokemonreviewapp
+        image: veerapaku/pokemonreviewapp:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080 
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "500m"
+          limits:
+            memory: "512Mi"
+            cpu: "1"
+          livenessProbe:       # Checks if the app is still alive — if it fails repeatedly, the container will be restarted.
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 10
+          periodSeconds: 10
+          timeoutSeconds: 2
+          failureThreshold: 3
+        readinessProbe:     # Checks if the app is ready to receive traffic — if it fails, the pod is removed from the Service endpoints.
+          httpGet:
+            path: /
+            port: 8080
+          initialDelaySeconds: 5
+          periodSeconds: 5
+          timeoutSeconds: 2
+          failureThreshold: 3            

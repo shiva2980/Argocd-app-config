@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: Dotnet
+  name: dotnet
 spec:
   selector:
     matchLabels:
-      app: Dotnet
+      app: dotnet
   replicas: 2
   template:
     metadata:
       labels:
-        app: Dotnet
+        app: dotnet
     spec:
       containers:
       - name: pokemonreviewapp

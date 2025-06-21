@@ -28,7 +28,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: .net-application
-  namespace: Dotnet
+  namespace: dotnet
 spec:
   project: Dotnet-Webapi
 
@@ -38,7 +38,7 @@ spec:
     path: manifests/dev/dotnet-webapi
   destination:
     server: https://kubernetes.default.svc
-    namespace: Dotnet
+    namespace: dotnet
   syncPolicy:
     syncOptions:  
     - CreateNamespace=true

@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: dev-pokemonreviewapp-service
+  name: pokemonreviewapp-service
   namespace: dotnet
 spec:
   type: LoadBalancer

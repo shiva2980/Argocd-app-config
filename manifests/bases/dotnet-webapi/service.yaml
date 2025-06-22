@@ -6,7 +6,7 @@ metadata:
 spec:
   selector:
     app: dotnet
-  type: LoadBalancer
+  type: ClusterIP
   ports:
     - name: pokemonreviewapp
       port: 8080

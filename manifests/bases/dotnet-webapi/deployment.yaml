@@ -29,7 +29,7 @@ spec:
             cpu: 300m
         livenessProbe:       # Checks if the app is still alive — if it fails repeatedly, the container will be restarted.
           httpGet:
-            path: /
+            path: /swagger
             port: 8080
           initialDelaySeconds: 10
           periodSeconds: 10
@@ -37,7 +37,7 @@ spec:
           failureThreshold: 3
         readinessProbe:     # Checks if the app is ready to receive traffic — if it fails, the pod is removed from the Service endpoints.
           httpGet:
-            path: /
+            path: /swagger
             port: 8080
           initialDelaySeconds: 5
           periodSeconds: 5

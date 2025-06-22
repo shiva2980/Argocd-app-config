@@ -28,25 +28,46 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: dotnet
-  labels:
-    name: dotnet
+  namespace: dotnet
   annotations:
-   nginx.ingress.kubernetes.io/rewrite-target: / 
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
+  ingressClassName: nginx
   rules:
-  - host: pokemon.local
-    http:
-      paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            # name: dev-pokemonreviewapp-service
-            name: dev-pokemonreviewapp-service
-            port: 
-              number: 80
+    - host: pokemon.local
+      http:
+        paths:
+          - path: /?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: dev-pokemonreviewapp-service
+                port:
+                  number: 8080
+# ---
 
-
+# apiVersion: networking.k8s.io/v1
+# kind: Ingress
+# metadata:
+#   name: dotnet
+#   labels:
+#     name: dotnet
+#   annotations:
+#    nginx.ingress.kubernetes.io/rewrite-target: / 
+# spec:
+#   rules:
+#   - host: pokemon.local
+#     http:
+#       paths:
+#       - pathType: Prefix
+#         path: "/"
+#         backend:
+#           service:
+#             # name: dev-pokemonreviewapp-service
+#             name: dev-pokemonreviewapp-service
+#             port: 
+#               number: 80
 ---
 
 apiVersion: networking.k8s.io/v1

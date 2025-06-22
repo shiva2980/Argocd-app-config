@@ -9,6 +9,8 @@ spec:
   replicas: 2
   template:
     metadata:
+      annotations:
+        admission.datadoghq.com/enabled: "false"  # ✅ Disables auto-injection for this pod    
       labels:
         app: dotnet
     spec:
